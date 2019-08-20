@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="image/logo-2.png" rel="shortcut icon">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+        
+        <!-- Font  -->
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+        <link rel="stylesheet" href="css/vendors/icofont.min.css">
+        <link rel="stylesheet" href="css/vendors/themify-icons.css">
+	    <link rel="stylesheet" href="css/vendors/ie7.css">
+    
+        <!-- Swiper -->
+        <link rel="stylesheet" href="css/vendors/swiper.min.css">
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="css/vendors/animate.css">
+        <!--jQuery ui-->
+        <link rel="stylesheet" href="css/vendors/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/vendors/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/vendors/jquery-ui.theme.min.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tashtebk</title>
+    </head>
+    <body data-spy="scroll" data-target="#header" data-offset="80">
+        <section id="container">
+            <div id="header">
+                 <header  class="navbar-fixed-top box-shadow">  
+                    <div class="top-head">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3  mg_bt10">
+                                    <a class="logo " href="index.html">
+                                        <img src="images/logo.JPG" alt="">
+                                    </a>
+                                    <div class="mobile hidden-sm hidden-md  hidden-lg">
+                                            <div class="header">
+                                                <div class="menu-toggle">
+                                                    <div class="line"></div>
+                                                    <div class="line"></div>
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mobile-nav"> 
+                                                    <ul>
+                                                        <li ><a href="index.html">Home</a></li>
+                                                        <li class="active"><a href="product.html">Product</a></li>
+                                                        <li><a href="#">Catalogs</a></li>
+                                                        <li><a href="#">manufacturers</a></li>
+                                                        <li><a href="about.html">About us</a></li>
+                                                        <li ><a href="#">Help</a></li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </div>
+                              
+                                <div class="col-md-6 col-sm-4 mg_bt10">
+                                    <form class="search">
+                                        <label>
+                                            <i class="fa fa-search"></i>
+                                            <span class="sr-only"> Search</span>
+                                        </label>
+                                        <input type="text" class="form-control parent" placeholder="Search">
+                                        <button type="submit" class="disnone"></button>
+                                    </form>
+                                </div>
+                                <div class=" col-md-4 col-sm-5 text-center">
+                                    <a type="button" data-toggle="modal" data-target="#myModal1" class="btn-sign">login</a>
+                                    <a type="button" data-toggle="modal" data-target="#myModal2" class="btn-sign">register</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-head hidden-xs">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li ><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="product.html">Product</a></li>
+                                    <li><a href="#">Catalogs</a></li>
+                                    <li><a href="#">manufacturers</a></li>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li ><a href="#">Help</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                 </header>
+                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Login</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group col-md-12">
+                                <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-12">
+                                <input type="password" class="form-control" placeholder="password">
+                                </div>
+                                
+                                <div class="form-group ">
+                                    <button type="button" class="btn-home">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Register</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group col-md-6">
+                                  <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name" >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="text" class="form-control" placeholder="phone">
+                                </div>
+                                <div class="form-group col-md-12">
+                                <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                <input type="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="password" class="form-control" placeholder=" Confirm password">
+                                    </div>
+                                <div class="form-group text-right ">
+                                    <button type="button" class="btn-home">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">
+                           <button type="button" class="btn-home">Submit</button>
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div id="body" class="gray">
+              <section class="banner">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Product</li>
+                    </ul>
+                </div>
+              </section>
+              <section class="product">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-4 ">
+                             <div class="side">
+                                <div class="check-box">
+                                    <h3>Category</h3>
+                                    <label class="contain"> Basic Bilding
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Materials (379)
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Flooring (13) wall
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Finishing (27)
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Chemicals and Adhesives
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Consumables
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Consumables
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="check-box">
+                                    <h3>Subliers</h3>
+                                    <label class="contain"> Sublier 1
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 2
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 3
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 4
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 5
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 6
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="contain"> Sublier 7
+                                        <input type="checkbox" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>  
+                                <div class="check-box">
+                                    <h3>Price</h3>
+                                    <div id="slider"></div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="col-md-8">
+                             <div class="row">
+                                 <div class="col-md-3">
+                                    <div class="p-item">
+                                        <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <div>
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="p-item">
+                                        <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <div>
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="p-item">
+                                        <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <div>
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="p-item">
+                                        <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <divn class="cart">
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <div class="p-item">
+                                        <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <divn class="cart">
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="p-item">
+                                        <div class="img-item">
+                                            <img src="images/p.PNG" alt="">
+                                        </div>
+                                        
+                                        <div class="p-info">
+                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                            <divn class="cart">
+                                                <a href="#">Add to Cart</a>
+                                                <span>15$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <div class="p-item">
+                                                <div class="img-item">
+                                                        <img src="images/p.PNG" alt="">
+                                                </div>
+                                                
+                                                <div class="p-info">
+                                                    <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                    <divn class="cart">
+                                                        <a href="#">Add to Cart</a>
+                                                        <span>15$</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                            <div class="p-item">
+                                                <div class="img-item">
+                                                        <img src="images/p.PNG" alt="">
+                                                </div>
+                                                
+                                                <div class="p-info">
+                                                    <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                    <divn class="cart">
+                                                        <a href="#">Add to Cart</a>
+                                                        <span>15$</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="p-item">
+                                                <div class="img-item">
+                                                    <img src="images/p.PNG" alt="">
+                                                </div>
+                                                
+                                                <div class="p-info">
+                                                    <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                    <divn class="cart">
+                                                        <a href="#">Add to Cart</a>
+                                                        <span>15$</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <div class="p-item">
+                                                        <div class="img-item">
+                                                                <img src="images/p.PNG" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="p-info">
+                                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                            <divn class="cart">
+                                                                <a href="#">Add to Cart</a>
+                                                                <span>15$</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                    <div class="p-item">
+                                                        <div class="img-item">
+                                                                <img src="images/p.PNG" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="p-info">
+                                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                            <divn class="cart">
+                                                                <a href="#">Add to Cart</a>
+                                                                <span>15$</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="p-item">
+                                                        <div class="img-item">
+                                                            <img src="images/p.PNG" alt="">
+                                                        </div>
+                                                        
+                                                        <div class="p-info">
+                                                            <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                            <divn class="cart">
+                                                                <a href="#">Add to Cart</a>
+                                                                <span>15$</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                    <div class="col-md-3">
+                                            <div class="p-item">
+                                            <div class="img-item">
+                                                <img src="images/p.PNG" alt="">
+                                            </div>
+                                            
+                                            <div class="p-info">
+                                                <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                <divn class="cart">
+                                                    <a href="#">Add to Cart</a>
+                                                    <span>15$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <div class="p-item">
+                                                <div class="img-item">
+                                                    <img src="images/p.PNG" alt="">
+                                                </div>
+                                                
+                                                <div class="p-info">
+                                                    <h4>Cement <i class="fa fa-heart-o"></i></h4>
+                                                    <divn class="cart">
+                                                        <a href="#">Add to Cart</a>
+                                                        <span>15$</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                         
+                    
+                 </div>
+              </section>
+            </div>
+            <div id="footer">
+                <footer >
+                    
+                    <div class="foot-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4>Policy Information</h4>
+                                    <ul class="list-unstyled">
+                                        <li>Privacy Policy</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Privacy Policy</li>
+                                      
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                        <h4>Company</h4>
+                                        <ul class="list-unstyled">
+                                            <li>About us </li>
+                                            <li>Careers</li>
+                                            <li>My Account</li>
+                                          
+                                        </ul>
+                                </div>
+                                <div class="col-md-4">
+                                        <h4>Need Help?</h4>
+                                        <ul class="list-unstyled">
+                                            <li>FAQ </li>
+                                            <li>Contact us</li>
+                                        
+                                          
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="foot-mid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-youtube"></a></li>
+                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li>/ Tashtebk</li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div  class="phone"> 
+                                        <i class="fa fa-phone"></i>
+                                        09005090100 - 09005090100 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="copyright text-center">
+                                    <p>
+                                        © Copyrights 2019 <a href="index.html" class="current-year">Tashtebk</a> All rights reserved <a href="https://www.logic-designs.com/" class="current-year">Logic Designs</a> .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                </footer>
+            </div>
+         </section>
+        <script src="js/vendors/jquery-3.3.1.min.js"></script>
+        <script src="js/vendors/jquery-ui.min.js"></script>
+        <script src="js/vendors/bootstrap.js"></script>
+        <script src="js/vendors/swiper.min.js"></script>
+        <script src="js/vendors/wow.min.js"></script>
+        <script src="js/script.js"></script>
+      </body>
+</html>

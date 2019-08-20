@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="image/logo-2.png" rel="shortcut icon">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/vendors/bootstrap.min.css">
+        
+        <!-- Font  -->
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+        <link rel="stylesheet" href="css/vendors/icofont.min.css">
+        <link rel="stylesheet" href="css/vendors/themify-icons.css">
+	    <link rel="stylesheet" href="css/vendors/ie7.css">
+    
+        <!-- Swiper -->
+        <link rel="stylesheet" href="css/vendors/swiper.min.css">
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="css/vendors/animate.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tashtebk</title>
+    </head>
+    <body data-spy="scroll" data-target="#header" data-offset="80">
+        <section id="container">
+            <div id="header">
+                 <header  class="navbar-fixed-top box-shadow">  
+                    <div class="top-head">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3  mg_bt10">
+                                    <a class="logo " href="index.html">
+                                        <img src="images/logo.JPG" alt="">
+                                    </a>
+                                    <div class="mobile hidden-sm hidden-md  hidden-lg">
+                                            <div class="header">
+                                                <div class="menu-toggle">
+                                                    <div class="line"></div>
+                                                    <div class="line"></div>
+                                                    <div class="line"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mobile-nav"> 
+                                                    <ul>
+                                                        <li ><a href="index.html">Home</a></li>
+                                                        <li class="active"><a href="product.html">Product</a></li>
+                                                        <li><a href="#">Catalogs</a></li>
+                                                        <li><a href="#">manufacturers</a></li>
+                                                        <li><a href="about.html">About us</a></li>
+                                                        <li ><a href="#">Help</a></li>
+                                                    </ul>
+                                            </div>
+                                        </div>
+                                </div>
+                              
+                                <div class="col-md-6 col-sm-4 mg_bt10">
+                                    <form class="search">
+                                        <label>
+                                            <i class="fa fa-search"></i>
+                                            <span class="sr-only"> Search</span>
+                                        </label>
+                                        <input type="text" class="form-control parent" placeholder="Search">
+                                        <button type="submit" class="disnone"></button>
+                                    </form>
+                                </div>
+                                <div class=" col-md-4 col-sm-5 text-center">
+                                    <a type="button" data-toggle="modal" data-target="#myModal1" class="btn-sign">login</a>
+                                    <a type="button" data-toggle="modal" data-target="#myModal2" class="btn-sign">register</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-head hidden-xs">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li ><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="product.html">Product</a></li>
+                                    <li><a href="#">Catalogs</a></li>
+                                    <li><a href="#">manufacturers</a></li>
+                                    <li><a href="about.html">About us</a></li>
+                                    <li ><a href="#">Help</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                 </header>
+                 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Login</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group col-md-12">
+                                <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-12">
+                                <input type="password" class="form-control" placeholder="password">
+                                </div>
+                                
+                                <div class="form-group ">
+                                    <button type="button" class="btn-home">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                         
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myModalLabel">Register</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group col-md-6">
+                                  <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name" >
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="text" class="form-control" placeholder="phone">
+                                </div>
+                                <div class="form-group col-md-12">
+                                <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                <input type="password" class="form-control" placeholder="password">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="password" class="form-control" placeholder=" Confirm password">
+                                    </div>
+                                <div class="form-group text-right ">
+                                    <button type="button" class="btn-home">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--<div class="modal-footer">
+                           <button type="button" class="btn-home">Submit</button>
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          
+                        </div>-->
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div id="body" class="gray">
+              <section class="banner">
+                <div class="container">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product">Product</a></li>
+                        <li>Product 1</li>
+                    </ul>
+                </div>
+              </section>
+              <section class="product">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-4 text-center">
+                             <div class="img-prdct">
+                                 <img src="images/p.PNG" alt="">
+                                 <div class="price">50$</div>
+                             </div>
+                         </div>
+                         <div class="col-md-8">
+                             <div class="desc">
+                                 <h4>Product 1</h4>
+                                 <p>Lorem ispum Lorem ispum Lorem ispum Lorem ispum</p>
+                                 <div class="count">
+                                    <button type="button" id="sub" class="sub">-</button>
+                                    <input type="number" id="1" value="1" min="1" max="3" />
+                                    <button type="button" id="add" class="add">+</button>
+                                </div>
+                                <a href="#" class="btn-sec">ADD TO Caret </a>
+                                <ul class="list-unstyled">
+                                    <li > <i class="fa fa-plus"></i> Handling Charge : 0.00</li>
+                                    <li> <i  class="fa fa-check"></i> Return Policy </li>
+                                    <li> <i  class="fa fa-comment-o"></i> spotted a mistake : let us know</li>
+                                </ul>
+                             </div>
+                         </div>
+                         <div class="clearfix"></div>
+                         <div class="info text-center ">
+                            <div class="row">
+                             <h4>Additional Information</h4>
+                             <br>
+                             <ul class="list-unstyled ">
+                                 <li><span class="col-md-6 text-left">Brand</span><span class="col-md-6 text-left">Brand Name</span></li>
+                                 <li><span class="col-md-6 text-left">Model Name</span> <span class="col-md-6 text-left">Model Name</span></li>
+                                 <li><span class="col-md-6 text-left">Weight in kilogram</span> <span class="col-md-6 text-left">Weight in kilogram</span></li>
+                                 <li><span class="col-md-6 text-left">Packing Type</span> <span class="col-md-6 text-left">Packing Type</span></li>
+                                 <li>
+                                     <span class="col-md-6 text-left">product Grade</span> <span class="col-md-6 text-left">product Grade</span>
+                                 </li>
+                             </ul>
+                            </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+              </section>
+            </div>
+            <div id="footer">
+                <footer >
+                    
+                    <div class="foot-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4>Policy Information</h4>
+                                    <ul class="list-unstyled">
+                                        <li>Privacy Policy</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Privacy Policy</li>
+                                      
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                        <h4>Company</h4>
+                                        <ul class="list-unstyled">
+                                            <li>About us </li>
+                                            <li>Careers</li>
+                                            <li>My Account</li>
+                                          
+                                        </ul>
+                                </div>
+                                <div class="col-md-4">
+                                        <h4>Need Help?</h4>
+                                        <ul class="list-unstyled">
+                                            <li>FAQ </li>
+                                            <li>Contact us</li>
+                                        
+                                          
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="foot-mid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a></li>
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-youtube"></a></li>
+                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li>/ Tashtebk</li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div  class="phone"> 
+                                        <i class="fa fa-phone"></i>
+                                        09005090100 - 09005090100 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foot-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="copyright text-center">
+                                    <p>
+                                        © Copyrights 2019 <a href="index.html" class="current-year">Tashtebk</a> All rights reserved <a href="https://www.logic-designs.com/" class="current-year">Logic Designs</a> .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                </footer>
+            </div>
+         </section>
+        <script src="js/vendors/jquery-3.3.1.min.js"></script>
+        <script src="js/vendors/bootstrap.js"></script>
+        <script src="js/vendors/swiper.min.js"></script>
+        <script src="js/vendors/wow.min.js"></script>
+        <script src="js/script.js"></script>
+      </body>
+</html>
