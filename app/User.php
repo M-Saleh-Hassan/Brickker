@@ -16,6 +16,8 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    static $switch_password_field = 0;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -31,7 +33,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'password_secondary', 'remember_token',
     ];
 
     public function categories()
@@ -43,7 +45,7 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Product');
     }
-    
+
     public function projects()
     {
         return $this->hasMany('App\Models\Project');
@@ -53,12 +55,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Subscription');
     }
-    
+
     public function orders()
     {
         return $this->hasMany('App\Models\Order');
     }
-    
+
     public function favorites()
     {
         return $this->hasMany('App\Models\Favorite');
@@ -78,12 +80,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Message', 'from_user');
     }
-    
+
     public function chatUsers()
     {
         $users = [];
         $messages = Message::where('from_user', $this->id)->orWhere('to_user', $this->id)->get();
-        
+
         foreach($messages as $message)
         {
             if(!in_array($message->from, $users) && $message->from->id != $this->id){
@@ -93,10 +95,10 @@ class User extends Authenticatable
                 $users[]=$message->to;
             }
         }
-        
+
         return $users;
     }
-    
+
     public function getUserMessages($id)
     {
         $messages = Message::
@@ -108,20 +110,20 @@ class User extends Authenticatable
             ['from_user', $id],
             ['to_user', $this->id]
         ])->get();
-        
+
         return $messages;
     }
-    
+
     // public function scales()
     // {
     //     return $this->belongsToMany('App\Models\Scale', 'scale_user', 'user_id', 'scale_id')->withPivot('id', 'has_consultant', 'consultant_id', 'identifier')->withTimeStamps();
     // }
-    
+
     public function providerOffers()
     {
         return $this->hasMany('App\Models\Offer', 'to_user');
     }
-    
+
     public function filteredProducts($categories_id, $low_price, $high_price)
     {
         if($categories_id == 0)return Product::selectRaw('*,price-price*discount/100 as real_price')->where('user_id', $this->id)->having('real_price', '>', $low_price)->having('real_price', '<', $high_price)->get();
@@ -132,19 +134,19 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Models\UserType', 'user_type');
     }
-    
+
     public function country()
     {
         return $this->belongsTo('App\Models\Country', 'country_id');
     }
-    
+
     public function getProductReview($product_id)
     {
         $review = Review::where('product_id', $product_id)->where('user_id', $this->id)->first();
         if(!empty($review)) return $review->rate;
         else return 0;
     }
-    
+
     public function getUsername()
     {
         $username = $this->username;
@@ -158,18 +160,18 @@ class User extends Authenticatable
         $username = preg_replace("/[\s_]/", "-", $username);
         return $username;
     }
-    
+
     public function getUserType()
     {
         if($this->userType) return $this->userType->type;
         return null;
     }
-    
+
     public function getUserTypeCategories()
     {
         return $this->userType->categories;
     }
-    
+
     public function getProviderPhone($provider_id)
     {
         $count =  Offer::where([
@@ -177,31 +179,31 @@ class User extends Authenticatable
             ['to_user', $provider_id],
             ['status', 1]
         ])->get()->count();
-        
+
         if(!$count) return 'hidden';
         return User::find($provider_id)->phone;
     }
-    
+
     public function getProductOrServiceType()
     {
         if($this->userType->type == 'manufacturer' || $this->userType->type == 'supplier') return 'Product';
         else return 'Service';
-        
+
     }
-    
+
     public function getProductOrServiceTypeAr()
     {
         if($this->userType->type == 'manufacturer' || $this->userType->type == 'supplier') return 'منتج';
         else return 'خدمة';
-        
+
     }
-    
+
     public function getProductsOrServicesTypeAr()
     {
         if($this->userType->type == 'manufacturer' || $this->userType->type == 'supplier') return 'منتجات';
         else return 'خدمات';
-        
+
     }
-    
-  
+
+
 }

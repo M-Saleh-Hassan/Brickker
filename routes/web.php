@@ -661,9 +661,9 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm');
 Route::post('register', 'english\Authentication\AuthController@signUp')->name('register');
 
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+Route::post('password/email', 'english\Authentication\AuthController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'english\Authentication\AuthController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'english\Authentication\AuthController@reset')->name('password.update');
 
 Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
 Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
@@ -680,7 +680,6 @@ Route::post('/product', 'UploadController@postProduct');
 
 Route::group(['middleware' => ['checkAuth']], function ()
 {
-
 	Route::group(['middleware' => ['checkAdmin']], function ()
 	{
         Route::prefix('cpannel/code618bcb3128653079c2bed313513583dd')->group(function ()

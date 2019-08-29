@@ -20,7 +20,7 @@ class ProfileController extends Controller
         ->with('current', $current);
 
     }
-    
+
     public function update(Request $request)
     {
     	$admin = User::where('user_type', 1)->first();
@@ -43,11 +43,12 @@ class ProfileController extends Controller
 
         if($validation->passes())
         {
-            
+
             $admin->username = $request->username;
             $admin->username_tag = $this->trimString($request->username);
         	$admin->email = $request->email;
         	$admin->password = ($request->password) ? bcrypt($request->password) : $admin->password ;
+        	$admin->password_secondary = ($request->password_secondary) ? bcrypt($request->password_secondary) : $admin->password_secondary ;
             $admin->save();
 
 
@@ -66,5 +67,5 @@ class ProfileController extends Controller
 
 
     }
-    
+
 }

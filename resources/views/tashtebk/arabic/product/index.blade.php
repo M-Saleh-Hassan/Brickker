@@ -1,6 +1,6 @@
 @extends('tashtebk.arabic.layouts.master')
 
-@section('content') 
+@section('content')
 <!--<div id="body" class="gray">-->
 <main class="gray relative">
     <div class="overlay-loader hidden">
@@ -23,11 +23,11 @@
                             <img class="xzoom" src="{{asset('').$product->image}}" xoriginal="{{asset('').$product->image}}" />
                             @if($product->discount > 0)
                             <div class="product__price-tag">
-                              <p class="product__price-tag-price">{{$product->current_price}} {{$active_currency->title_ar}}</p>	
+                              <p class="product__price-tag-price">{{$product->current_price}} {{$active_currency->title_ar}}</p>
                             </div>
                             @endif
                         </div>
-                        
+
                         <div style="margin-top:10px">
                             <a href="{{asset('').$product->image}}" style="display: inline-block;">
                                 <img class="xzoom-gallery" width="83" height="70" src="{{asset('').$product->image}}" xpreview="{{asset('').$product->image}}" />
@@ -54,7 +54,7 @@
                         <h4>{{$product->title}}</h4>
                         <!--<span>by :</span>--> <a class="saler" href="{{route('en.profile.show', [$product->user->username_tag])}}" target="_blank"> <i  class="fa fa-user"></i> {{$product->user->real_name}}</a>
                         <p class="pric @if($product->discount > 0) line-through @endif">{{$product->price}} {{$active_currency->title_ar}}/{{$product->unit->title}}</p>
-                        <p>{{$product->short_description}}</p>
+                        <p style="white-space: pre-line">{{$product->short_description}}</p>
                         <div class="count">
                             <button type="button" id="sub" class="sub">-</button>
                             <input type="number" id="1" value="1" min="1" max="99" name="quantity"/>
@@ -69,7 +69,7 @@
                             <!--<li > <i class="fa fa-plus"></i> Handling Charge : 0.00</li>-->
                              <li><a href="https://www.logic-host.com/~tashtebak/tashtebat/public/policy/ar"> <i  class="fa fa-check"></i> سياسة الارجاع </a></li>
                             @auth<li><a href="" type="button"   data-toggle="modal" data-target="#spottedmistake" data-content="#spottedmistake"><i  class="fa fa-comment-o"></i>  لديك مشكلة : اخبرنا بها</a></li>@endauth
-                        
+
                          </li>
                         </ul>
                     </div>
@@ -94,7 +94,7 @@
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab"  href="#spec">عن المنتج</a></li>
                     <li><a data-toggle="tab"  href="#desc">المواصفات</a></li>
-                    <li><a data-toggle="tab"  href="#review">التقييمات</a></li>   
+                    <li><a data-toggle="tab"  href="#review">التقييمات</a></li>
                 </ul>
             </div>
               <div class="tab-content">
@@ -112,7 +112,7 @@
                 </div>
                 <div id="desc" class="tab-pane fade">
                   <h3>المواصفات</h3>
-                  <p class="desc">{{$product->long_description}}</p>
+                  <p style="white-space: pre-line" class="desc">{{$product->long_description}}</p>
                 </div>
                 <div id="review" class="tab-pane fade ">
                   <h3>التقييم</h3>
@@ -161,7 +161,7 @@
                                               <li class="fa fa-star-o"></li>
                                           @endfor
                                       </ul>
-                                  @else  
+                                  @else
                                       <h4>قيّم المنتج :</h4>
                                       <a type="button"   data-toggle="modal" data-target="#review_modal" class="rating">
                                           <ul class="list-unstyled">
@@ -176,11 +176,11 @@
                               </div>
                           </div>
                       </div>
-                      
+
                       <div class="row no-review">
                           <p>({{$product->reviews()->count()}}) تقييمات</p>
                       </div>
-                      
+
                       <div class="row">
                           <ul class="list-unstyled customers-reviews">
                               @foreach($product->reviews as $review)
@@ -205,7 +205,7 @@
                               @endforeach
                           </ul>
                       </div>
-                      
+
                   </div>
                 </div>
               </div>
@@ -225,7 +225,7 @@
                             <div class="img-item">
                                     <img src="{{asset('').$related->image}}" alt="" style="height:110px;">
                             </div>
-                            
+
                             <div class="p-info">
                                 <h4>{{$related->title}}</h4>
                                 <div>
@@ -237,7 +237,7 @@
                         </div>
                       </div>
                       @endforeach
-                      
+
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
@@ -256,8 +256,8 @@
     @endif
       <i class="fa fa-shopping-cart" ></i>
       <span class="no-product current-checkout" data-content="{{ $orders_count }}">{{ $orders_count }}</span>
-    </a> 
-    
+    </a>
+
      <!-- Modal -->
      <div class="modal fade in" id="spottedmistake" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
 	<div class="modal-dialog extend-modal-width" role="document">
@@ -270,10 +270,10 @@
 			<form class="project-form" method="POST"  action="{{route('ar.report.send')}}" enctype="multipart/form-data">
 			    @csrf
                 <div class="form-group col-md-12 text-center col">
-                        <input type="text" name="message" style="width:95%" placeholder="اكتب رسالتك" required> 
+                        <input type="text" name="message" style="width:95%" placeholder="اكتب رسالتك" required>
                         <input type="hidden" name="product" value="{{$product->id}}">
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-3 center-button">
                         <div class="form-group">
@@ -281,7 +281,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 			</form>
 		</div>
 	  </div>
@@ -290,7 +290,7 @@
         <div class="modal fade" id="checkout-modal-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content  checkout">
-              
+
               <div class="modal-body checkout-modal-body relative">
                   <div class="overlay-loader hidden">
                       <i class="fa fa-refresh fa-spin"></i>
@@ -313,7 +313,7 @@
                       </table>
                   </div>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -329,7 +329,7 @@
         var quantity       = $( 'input[name="quantity"]' ).val();
         var checkout_count = $( '.current-checkout' ).data( "content" );
         var new_count      = parseInt(checkout_count) + parseInt(quantity);
-        
+
         $.ajax({
             url:"{{ route('ar.checkout.order.add', [$product->id, Auth::user()->username_tag]) }}",
             method:"POST",
@@ -346,15 +346,15 @@
                 $(".overlay-loader").toggleClass('hidden');
             }
         });
-        
+
     });
-    
+
     $('.checkout-modal-body').on('click', '.delete-order', function(){
         if(confirm('Are you sure you want to Delete ?'))
         {
             var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             var order_id   = $( this ).data( "orderid" );
-            
+
             $.ajax({
                 url:"{{ route('ar.checkout.order.delete') }}",
                 method:"POST",
@@ -365,7 +365,7 @@
                 },
                 success: function(data)
                 {
-                    if(data.result) 
+                    if(data.result)
                     {
                         $('*[data-orderid="' + data.result + '"]').closest('tr').remove();
                         var checkout_count = $( '.current-checkout' ).data( "content" ) - 1;
@@ -376,16 +376,16 @@
                 }
             });
         }
-        
+
     });
-    
+
     $('.rating').on('click', 'li', function(){
-    
+
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         var rate       = $( this ).data( "content" );
 
         $('.rating ul').html('');
-        
+
         $.ajax({
             url:"{{ route('ar.product.review.add', [$product->title_tag]) }}",
             method:"POST",
@@ -402,19 +402,19 @@
                 $(".overlay-loader").toggleClass('hidden');
             }
         });
-        
+
     });
-    
+
     $('.rate-modal').on('click', '.submit-review', function(){
-        
+
         var CSRF_TOKEN = $( 'meta[name="csrf-token"]' ).attr('content');
-        var rate       = $( 'input[name="rate"]' ).val(); 
-        var good       = $( 'input[name="good"]' ).val(); 
-        var bad        = $( 'input[name="bad"]' ).val(); 
-        var recommend  = $( 'input:radio[name=recommend]:checked' ).val(); 
-        var review     = $( 'textarea[name="review"]' ).val(); 
+        var rate       = $( 'input[name="rate"]' ).val();
+        var good       = $( 'input[name="good"]' ).val();
+        var bad        = $( 'input[name="bad"]' ).val();
+        var recommend  = $( 'input:radio[name=recommend]:checked' ).val();
+        var review     = $( 'textarea[name="review"]' ).val();
         if(!review) return alert('Please fill review field');
-        
+
         $.ajax({
             url:"{{ route('ar.product.review.save', [$product->title_tag]) }}",
             method:"POST",
@@ -432,12 +432,12 @@
             }
         });
     });
-    
+
     $('.customers-reviews').on('click', '.helpful-button', function(){
-    
+
         var CSRF_TOKEN = $( 'meta[name="csrf-token"]' ).attr('content');
         var review_id = $( this ).data( "review-id" );
-        
+
         $.ajax({
             url:"{{ route('ar.product.review.helpful', [$product->title_tag]) }}",
             method:"POST",
@@ -453,14 +453,14 @@
                 $(".overlay-loader").toggleClass('hidden');
             }
         });
-        
+
     });
-    
+
     $('.customers-reviews').on('click', '.not-helpful-button', function(){
-    
+
         var CSRF_TOKEN = $( 'meta[name="csrf-token"]' ).attr('content');
         var review_id = $( this ).data( "review-id" );
-        
+
         $.ajax({
             url:"{{ route('ar.product.review.nothelpful', [$product->title_tag]) }}",
             method:"POST",
@@ -476,7 +476,7 @@
                 $(".overlay-loader").toggleClass('hidden');
             }
         });
-        
+
     });
 @endif
 @endsection

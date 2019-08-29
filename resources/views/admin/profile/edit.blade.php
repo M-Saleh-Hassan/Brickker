@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('content')   
+@section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -10,13 +10,13 @@
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{{route('admin.home.index')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active">Admin</li>    
+                <li class="active">Admin</li>
             </ol>
         </section>
-    
+
         <!-- Main content -->
         <section class="content container-fluid">
-    
+
             <!--------------------------
             | Your Page Content Here |
             -------------------------->
@@ -41,33 +41,38 @@
                                         <label>Username</label>
                                         <input type="text" class="form-control" placeholder="Username" name="username" value="{{$current->username}}">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label>Email</label>
                                         <input type="text" class="form-control" placeholder="Email" name="email" value="{{$current->email}}">
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label>Password</label>
                                         <input type="password" class="form-control" placeholder="******" name="password" >
                                     </div>
-                                    
+
+                                    <div class="form-group">
+                                        <label>Secondary Password</label>
+                                        <input type="password" class="form-control" placeholder="******" name="password_secondary" >
+                                    </div>
+
                                 </div>
                                 <!-- /.box-body -->
                                 <button type="submit" class="btn btn-primary">Edit</button>
-                            </form>        
+                            </form>
                         </div>
                     </div>
                 </div>
 
-            </div>    
+            </div>
         </section>
         <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-    
-@endsection    
-@section('js')  
+
+@endsection
+@section('js')
 <script>
 
     $(document).ready(function(){
@@ -102,6 +107,6 @@
         });
     });
 
-</script> 
+</script>
 
 @endsection
