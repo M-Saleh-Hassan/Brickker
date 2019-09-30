@@ -1,25 +1,25 @@
 @extends('tashtebk.english.layouts.master')
 
-@section('content') 
+@section('content')
 <!--<div id="body" class="gray">-->
 <main class="gray relative" >
     <div class="overlay-loader hidden">
          <i class="fa fa-refresh fa-spin"></i>
     </div>
-   
+
     <section id="products" class="product">
        <div class="container">
            <div class="row">
                <div class="col-md-3 products-filter">
                    <div class="side" style="height:985px">
-                       
+
                     <div class="row">
                          <ul class="list-unstyled list-inline list-protfolio " id="filter">
                             <li class="fil-cat mixitup-control-active" data-mixitup-control data-filter=".categories_view_only"><a>Categories</a></li>
                             <li class="fil-cat profiles-button " data-mixitup-control data-filter=".profiles"><a>Profiles</a></li>
                         </ul>
                     </div>
-                   
+
                       <div class="check-box mix scrollable categories_view_only">
                           <h3>Categories</h3>
                           <div class="divider"></div>
@@ -39,7 +39,7 @@
                                   <span class="checkmark"></span>
                               </label>
                            @endforeach
-                      </div>  
+                      </div>
                       <div class="check-box profiles-service-providers mix profiles">
                           <h3>Service Providers</h3>
                           <div class="divider"></div>
@@ -49,7 +49,7 @@
                                   <span class="checkmark"></span>
                               </label>
                            @endforeach
-                      </div>  
+                      </div>
                       <div class="check-box mix categories_view_only">
                           <h3>Price</h3>
                           <div class="divider"></div>
@@ -57,15 +57,15 @@
                           <div class="row">
                               <div class="col-md-10" style="padding-right:0">
                                 <input type="text" name="minimum_range" id="minimum_range" class="form-control tooltips tooltip1" value="1" />
-                                <input type="text" name="maximum_range" id="maximum_range" class="form-control tooltips tooltip2" value="450" />
+                                <input type="text" name="maximum_range" id="maximum_range" class="form-control tooltips tooltip2" value="2500000" />
                             	<div id="price_range" style="background: #fff"></div>
-                            	
+
                               </div>
                               <div class="col-md-2">
                                   <a class="price-filter" style="cursor: pointer;"><i class="fa fa-search"></i></a>
                               </div>
-                            </div>	
-                         
+                            </div>
+
                           <!--<div id="slider">-->
                           <!--</div>-->
                       </div>
@@ -99,7 +99,7 @@
                                                     <div class="img-item">
                                                             <a href="{{route('en.product.index', ['title_tag'=>$product->title_tag])}}"><img src="{{asset('').$product->image}}" alt="" style="height:110px;"></a>
                                                     </div>
-                                                    
+
                                                     <div class="p-info">
                                                         <a href="{{route('en.product.index', ['title_tag'=>$product->title_tag])}}"><h4>{{$product->title}} </h4></a>
                                                         <div>
@@ -137,11 +137,11 @@
                                         @foreach($user_type->users()->WhereNotIn('user_type', [1,15])->OrderBy('user_type','ASC')->get() as $user)
                                               <div class="swiper-slide ">
                                                 <div class="p-item relate-item">
-                                                
+
                                                     <div class="img-item">
                                                         <a href="{{route('en.profile.show', [$user->username_tag])}}"><img src="{{asset('').$user->avatar}}" alt="" style="height:110px;"></a>
                                                     </div>
-                                                    
+
                                                     <div class="p-info">
                                                         <a href="{{route('en.profile.show', [$user->username_tag])}}"><h4> {{$user->username}} </h4></a>
                                                     </div>
@@ -163,9 +163,9 @@
         </div>
     </section>
 </main>
-     
-      
-     
+
+
+
     <!--============-->
 @endsection
 
@@ -181,28 +181,28 @@
     /*slider1.on('slide', function(newValue) {
         alert(newValue);
     };*/
-    
+
     $( "#price_range" ).slider({
 		range: true,
 		min: 1,
-		max: 700,
-		values: [ 1, 450 ],
+		max: 5000000,
+		values: [ 1, 2500000 ],
 		slide:function(event, ui){
 		    $("#minimum_range").val(ui.values[0]);
 			$("#maximum_range").val(ui.values[1]);
 		}
 	});
-	
+
 	/* Profiles Part */
     $( ".profiles-service-providers" ).on( "click", "input[type='checkbox']", function() {
-    
+
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-        
+
         var user_types_profiles_filter = [];
-        $.each($("input[name='user_types_checkbox_profiles_filter']:checked"), function(){            
+        $.each($("input[name='user_types_checkbox_profiles_filter']:checked"), function(){
             user_types_profiles_filter.push($(this).val());
         });
-        
+
         $.ajax({
             url:"{{ route('en.profiles.filter') }}",
             method:"POST",
@@ -216,7 +216,7 @@
                 $(".products-view-profiles").html('');
                 $(".products-view-profiles").html(data.result);
                 $(".overlay-loader").toggleClass('hidden');
-                
+
                 var swiper = new Swiper('.swiper-multirows-profiles', {
                   slidesPerView: 4,
                   slidesPerColumn: 1,
@@ -230,25 +230,25 @@
         });
 
     });
-    
+
 	/* Products Part */
     $( ".products-filter" ).on( "click", "input[type='checkbox'], .price-filter", function() {
-        
+
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-        
+
         var categories_filter = [];
-        $.each($("input[name='categories_checkbox_filter']:checked"), function(){            
+        $.each($("input[name='categories_checkbox_filter']:checked"), function(){
             categories_filter.push($(this).val());
         });
-        
+
         var user_types_filter = [];
-        $.each($("input[name='user_types_checkbox_filter']:checked"), function(){            
+        $.each($("input[name='user_types_checkbox_filter']:checked"), function(){
             user_types_filter.push($(this).val());
         });
-        
+
         var low_price = $("#minimum_range").val();
         var high_price = $("#maximum_range").val();
-        
+
         $.ajax({
             url:"{{ route('en.category.products.filter') }}",
             method:"POST",
@@ -262,7 +262,7 @@
                 $(".products-view").html('');
                 $(".products-view").html(data.result);
                 $(".overlay-loader").toggleClass('hidden');
-                
+
                 var swiper = new Swiper('.swiper-multirows', {
                   slidesPerView: 4,
                   slidesPerColumn: 1,
@@ -282,7 +282,7 @@
         var current_class = $( this ).children().attr('class');
         var target_class  = 'fa fa-heart';
         if(current_class == target_class) target_class = 'fa fa-heart-o';
-        
+
         $.ajax({
             url:"{{ route('en.product.favorite') }}",
             method:"POST",
@@ -304,12 +304,12 @@
 @section('custom-script')
            <!--added by fareed-->
        <!-- MIXitUP js  added by fareed-->
-     
+
          <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.js"></script>
        <script>
   var mixer = mixitup('#products.product', {
       load: {
-        filter: '.categories_view_only'  
+        filter: '.categories_view_only'
       },
     selectors: {
         control: '[data-mixitup-control]'
@@ -364,6 +364,7 @@
 }
 .tooltip2{
     left:90px;
+    width:66px;
 }
 
 .price-filter{
@@ -390,35 +391,35 @@
 }
  #filter{
      display:flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content:space-around;
-     
+
  }
  #filter li{
      color:#2c2c2c;
      cursor: pointer;
      font-size:16px;
      font-weight:600;
-     
+
      transition:.5s all;
  }
   #filter li a {
         display: inline-block;
         padding: 8px 15px;
-   
+
         color: #384043;
         font-weight: bold;
         font-size: 14px;
         border: 1px solid #808080;
         border-radius: 10px;
-    } 
+    }
   #filter li a:active,   #filter li a:hover,  #filter li a:focus,  #filter li.active a, #filter li.mixitup-control-active a {
             background: #ef374a;
             border-color: #ef374a;
             color: #fff;
         }
-        
-     
+
+
  /*      #filter li:after{*/
  /*    content: ""; */
  /*   justify-content:flex-start;*/
@@ -434,21 +435,21 @@
  /*   #filter li:hover:after {*/
  /*     width: 25px; */
  /*     transition:.5s all;*/
-     
-     
+
+
  /*}*/
  .side{
       transition:.5s all;
-   
-         padding: 20px 30px !important;
-   
+
+         padding: 20px 15px !important;
+
  }
  .scrollable{
        overflow:auto;
         height: 360px;
  }
  .products-view .swiper-slide{
-     margin:15px !important;
+     /* margin:15px !important; */
  }
  .img-item img {
      margin:0;

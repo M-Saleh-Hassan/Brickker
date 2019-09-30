@@ -33,7 +33,7 @@ class SettingsController extends Controller
         ]);
         if($validation->passes())
         {
-            
+
             $website_title = $request->website_title;
             $mobile1  = $request->mobile1;
             $mobile2  = $request->mobile2;
@@ -45,6 +45,9 @@ class SettingsController extends Controller
             $twitter  = $request->twitter;
             $insta    = $request->insta;
             $fb_show  = ($request->fb_show == '1') ? 1 : 0;
+            $email_show = ($request->email_show == '1') ? 1 : 0;
+            $mobile1_show = ($request->mobile1_show == '1') ? 1 : 0;
+            $mobile2_show = ($request->mobile2_show == '1') ? 1 : 0;
             $youtube_show = ($request->youtube_show == '1') ? 1 : 0;
             $twitter_show = ($request->twitter_show == '1') ? 1 : 0;
             $insta_show   = ($request->insta_show == '1') ? 1 : 0;
@@ -63,8 +66,11 @@ class SettingsController extends Controller
             $setting->youtube_show  = $youtube_show;
             $setting->twitter_show   = $twitter_show;
             $setting->insta_show    = $insta_show;
+            $setting->email_show    = $email_show;
+            $setting->mobile1_show    = $mobile1_show;
+            $setting->mobile2_show    = $mobile2_show;
             $setting->save();
-            
+
             return response()->json([
                 'message'        => 'Settings saved Successfully',
                 'errors'         => '',
@@ -78,5 +84,5 @@ class SettingsController extends Controller
             ]);
         }
 
-    } 
+    }
 }

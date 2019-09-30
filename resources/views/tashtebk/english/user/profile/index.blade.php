@@ -70,6 +70,13 @@
                                         <input type="text" class="form-control"  name="real_name" placeholder="Real Name" value="{{(Request::old('real_name')) ? Request::old('real_name') : Auth::user()->real_name}}">
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-2 control-label">UserName</label>
+
+                                        <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="username" placeholder="UserName" value="{{(Request::old('username')) ? Request::old('username') : Auth::user()->username}}">
+                                        </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Email*</label>

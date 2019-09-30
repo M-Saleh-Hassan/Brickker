@@ -1,6 +1,6 @@
 @extends('tashtebk.english.layouts.master')
 
-@section('content') 
+@section('content')
 <!--<div id="body">-->
 <main>
     <section class="gray section">
@@ -40,24 +40,31 @@
                             <li  class=""  ><a data-toggle="tab" href="#menu5">Manage Profile</a></li>
 
                         </ul>
-                        
+
                         <div class="tab-content">
-                            <div id="home" class="tab-pane fade 
+                            <div id="home" class="tab-pane fade
                             @if(session('active') != 'my_products'  && $active == 'profile') in active @endif
                             ">
                                 <form class="form-horizontal" method="POST" action="{{ route('en.profile.update',['username_tag' => Auth::user()->username_tag]) }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Real Name*</label>
-                    
+
                                         <div class="col-sm-10">
                                         <input type="text" class="form-control"  name="real_name" placeholder="Real Name" value="{{(Request::old('real_name')) ? Request::old('real_name') : Auth::user()->real_name}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-2 control-label">UserName</label>
+
+                                        <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="username" placeholder="UserName" value="{{(Request::old('username')) ? Request::old('username') : Auth::user()->username}}">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Email*</label>
-                    
+
                                         <div class="col-sm-10">
                                         <input type="email" class="form-control"  name="email" placeholder="Email" value="{{(Request::old('email')) ? Request::old('email') : Auth::user()->email}}">
                                         </div>
@@ -65,12 +72,12 @@
 
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Country*</label>
-                    
+
                                         <div class="col-sm-10">
                                             <select class="form-control" name="country"                                            >
                         						@foreach($countries as $country)
                         							<option value="{{$country->id}}" @if (Request::old('sign_up_country') == $country->title_en || Auth::user()->country->title_en == $country->title_en) selected @endif>
-                        								{{$country->title_en}}		
+                        								{{$country->title_en}}
                         							</option>
                         						@endforeach
                                             </select>
@@ -79,7 +86,7 @@
 
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Phone*</label>
-                    
+
                                         <div class="col-sm-10">
                                         <input type="text" class="form-control" name="phone" placeholder="Phone" value="{{(Request::old('phone')) ? Request::old('phone') : Auth::user()->phone}}">
                                         </div>
@@ -87,27 +94,27 @@
 
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Title</label>
-                    
+
                                         <div class="col-sm-10">
                                         <input type="text" class="form-control" name="short_title" placeholder="Title" value="{{(Request::old('short_title')) ? Request::old('short_title') : Auth::user()->short_title}}">
                                         </div>
                                     </div>
-    
+
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Bio</label>
-                                        
+
                                         <div class="col-sm-10">
                                             <textarea type="text" class="form-control" name="bio" placeholder="Bio" >{{(Request::old('bio')) ? Request::old('bio') : Auth::user()->bio}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label  class="col-sm-2 control-label">Avatar</label>
-                    
+
                                         <div class="col-sm-10">
                                         <input type="file" class="form-control" name="avatar">
                                         </div>
                                     </div>
-    
+
                                     <div class="row">
                                         <div class="col-md-3 right-button">
                                             <div class="form-group">
@@ -128,7 +135,7 @@
                                                         <img src="{{asset('').$favorite->product->image}}" alt="" style="height:110px;">
                                                     </a>
                                                 </div>
-                                                
+
                                                 <div class="p-info">
                                                     <h4 class="edit-form-title">{{$favorite->product->title}} </h4>
                                                     <div>
@@ -138,12 +145,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>                                                                    
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
-                            
-                            <div id="menu2" class="tab-pane fade 
+
+                            <div id="menu2" class="tab-pane fade
                             @if($active == 'projects') in active @endif
                             ">
                                 <form id="project_add_form" class="form-horizontal" method="POST" action="javascript:void(0)" enctype="multipart/form-data">
@@ -186,8 +193,8 @@
                                     </div>
                                 </form>
                             </div>
-                            
-                            <div id="menu3" class="tab-pane fade 
+
+                            <div id="menu3" class="tab-pane fade
                             @if($active == 'my_projects') in active @endif
                             ">
                                 <style>
@@ -198,7 +205,7 @@
                                   cursor: pointer;
                                   z-index:10;
                                   opacity:1;
-                                  
+
                                 }
                                 .close:hover, .close:focus {
                                     color: white;
@@ -214,7 +221,7 @@
                                   cursor: pointer;
                                   z-index:10;
                                   opacity:1;
-                                  
+
                                 }
                                 .close1:hover, .close1:focus {
                                     color: white;
@@ -227,7 +234,7 @@
                                 <div class="row product-pane projects-container">
                                     @foreach (Auth::user()->projects as $project)
                                         <div class="col-md-3">
-                                            
+
                                             <div class="modal fade" id="ProjectModal{{$project->id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         		<div class="modal-dialog extend-modal-width" role="document">
                                         		  <div class="modal-content" >
@@ -249,43 +256,43 @@
                                                                     <input type="text" class="form-control" name="project_title" placeholder="Project Title" value="{{(empty(Request::old('project_title'))) ? $project->title : Request::old('project_title')}}">
                                                                 </div>
                                                             </div>
-                                                            
+
                                         					<div class="form-group col-md-12">
                                                                 <label  class="col-sm-2 control-label">Floors</label>
-                                                                
+
                                                                 <div class="col-sm-10">
                                                                     <select class="floors_select form-control col-md-12" name="floors[]" multiple="multiple" required>
                                                                         @foreach ($project->floors as $floor)
-                                                                        <option value="{{$floor->title}}"selected>{{$floor->title}}</option>                                                    
+                                                                        <option value="{{$floor->title}}"selected>{{$floor->title}}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            
+
                                         					<div class="form-group col-md-12">
                                                                 <label  class="col-sm-2 control-label">Flats</label>
-                                                                
+
                                                                 <div class="col-sm-10">
                                                                     <select class="flats_select form-control col-md-12" name="flats[]" multiple="multiple" required>
                                                                         @foreach ($project->flats as $flat)
-                                                                        <option value="{{$flat->title}}"selected>{{$flat->title}}</option>                                                    
+                                                                        <option value="{{$flat->title}}"selected>{{$flat->title}}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            
+
                                         					<div class="form-group col-md-12">
                                                                 <label  class="col-sm-2 control-label">Rooms</label>
-                                                                
+
                                                                 <div class="col-sm-10">
                                                                     <select class="rooms_select form-control col-md-12" name="rooms[]" multiple="multiple" required>
                                                                         @foreach ($project->rooms as $room)
-                                                                        <option value="{{$room->title}}"selected>{{$room->title}}</option>                                                    
+                                                                        <option value="{{$room->title}}"selected>{{$room->title}}</option>
                                                                         @endforeach
                                                                     </select>
                                                                 </div>
                                                             </div>
-                                                            
+
                                                             <div class="row">
                                                                 <div class="col-md-3 center-button">
                                                                     <div class="form-group">
@@ -293,7 +300,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            
+
                                         				</form>
                                         			</div>
                                         		  </div>
@@ -306,21 +313,21 @@
                                                         <a type="button" data-toggle="modal" data-target="#ProjectModal{{$project->id}}" class="primary"  title="Edit"><i class="fa fa-edit"></i></a>
                                                         <!--<a href="{{route('en.product.index', ['title_tag'=>$project->title])}}" class="success" title="view BOQ" target="_blank"><i class="fa fa-eye"></i></a>-->
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <div class="img-item">
                                                         <img src="{{asset('')}}/tashtebk/images/icons/project-management.png" alt="" style="height:110px;">
                                                 </div>
-                                                
+
                                                 <div class="p-info">
                                                     <h4 class="edit-form-title">{{$project->title}} </h4>
                                                 </div>
                                             </div>
-                                        </div>                                                                    
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
-                            
+
                              <div id="menu5" class="tab-pane fade">
                                 <div class="row flexing">
                                     <button class="btn btn-danger deactivate"><i class="fa fa-times"></i> Deactivate</button>
@@ -328,8 +335,8 @@
                                     <button class="btn btn-warning change-type"><i class="fa fa-id-badge"></i> Change Account Type</button>
 
                                 </div>
-                                
-                               
+
+
                             </div>
                         </div>
                     </div>
@@ -358,11 +365,11 @@
         });
 
     }
-    
+
     initializeSelect2();
-    
+
     $( '.change-type' ).on('click',function(){
-    
+
         if(confirm('Note:: All Your data will be deleted and reset ?'))
         {
             var CSRF_TOKEN  = $('meta[name="csrf-token"]').attr('content');
@@ -384,7 +391,7 @@
     });
 
     $( '.delete-account' ).on('click',function(){
-    
+
         if(confirm('Are you sure you want to PERMANENTLY delete your account ?'))
         {
             var CSRF_TOKEN  = $('meta[name="csrf-token"]').attr('content');
@@ -404,9 +411,9 @@
             });
         }
     });
-    
+
     $( '.deactivate' ).on('click',function(){
-    
+
         if(confirm('Are you sure you want to deactivate your account ?'))
         {
             var CSRF_TOKEN  = $('meta[name="csrf-token"]').attr('content');
@@ -426,14 +433,14 @@
             });
         }
     });
-    
+
     $('.product-pane').on('click', '.add-favorite', function(){
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         var product_id   = $( this ).data( "productid" );
         var current_class = $( this ).children().attr('class');
         var target_class  = 'fa fa-heart';
         if(current_class == target_class) target_class = 'fa fa-heart-o';
-        
+
         $.ajax({
             url:"{{ route('en.product.favorite') }}",
             method:"POST",
@@ -513,17 +520,17 @@
                     });
                     alert( errors_message );
                 }
-                
+
                 $(".overlay-loader").toggleClass('hidden');
             }
         });
     });
-    
+
     $('.projects-container').on('click', '.delete-project', function(){
         if(!confirm('Are you sure you want to delete ?')) return 1;
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         var project_id = $( this ).data('project');
-        
+
         $.ajax({
             url:"{{ route('en.project.delete',['username_tag' => Auth::user()->username_tag]) }}",
             method:"POST",

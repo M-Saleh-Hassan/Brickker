@@ -1,6 +1,6 @@
 <section  class=" sections gray">
     <div class="container text-center">
-        <h2>الفئات</h2>
+        <h2>التصنيفات</h2>
         <div class="swiper-container swiper-ctg">
             <div class="swiper-wrapper">
                 @foreach($categories as $category)
@@ -12,7 +12,7 @@
                             <h4>{{$category->title}}</h4>
                         </a>
                     </div>
-                @endforeach                
+                @endforeach
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>

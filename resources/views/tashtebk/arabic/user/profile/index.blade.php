@@ -26,7 +26,7 @@
                             <p>{{Auth::user()->company_name}}</p>
                         </div>
                         <div class="item">
-                            <h5><div class="fa fa-pencil"></div> الفئات</h5>
+                            <h5><div class="fa fa-pencil"></div> التصنيفات</h5>
                             <?php $i=0; ?>
                             @foreach (Auth::user()->categories as $category)
                                 <?php if($i==4)$i=0?>
@@ -68,6 +68,13 @@
 
                                         <div class="col-sm-10">
                                         <input type="text" class="form-control"  name="real_name" placeholder="الاسم الحقيقي " value="{{(Request::old('real_name')) ? Request::old('real_name') : Auth::user()->real_name}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  class="col-sm-2 control-label">اسم المستخدم</label>
+
+                                        <div class="col-sm-10">
+                                        <input type="text" class="form-control"  name="username" placeholder="اسم المستخدم" value="{{(Request::old('username')) ? Request::old('username') : Auth::user()->username}}">
                                         </div>
                                     </div>
 
@@ -126,7 +133,7 @@
                                     </div>
 
                                     <div class="form-group categories-test">
-                                        <label  class="col-sm-2 control-label">الفئات</label>
+                                        <label  class="col-sm-2 control-label">التصنيفات</label>
 
                                         <div class="col-sm-10">
                                             <select class="js-example-basic-multiple" name="user_categories[]" multiple="multiple">

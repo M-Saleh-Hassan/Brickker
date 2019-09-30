@@ -1,5 +1,5 @@
 <!--<div id="header">-->
-    <header  class="navbar-fixed-top box-shadow">  
+    <header  class="navbar-fixed-top box-shadow">
        <div class="top-head">
            <div class="container">
                <div class="row">
@@ -15,7 +15,7 @@
                                        <div class="line"></div>
                                    </div>
                                </div>
-                               <div class="mobile-nav d-none"> 
+                               <div class="mobile-nav d-none">
                                        <ul>
                                            <li class="active" ><a href="{{route('ar.home.index')}}">الرئيسية</a></li>
                                            @if(Auth::check())
@@ -23,7 +23,7 @@
                                            @else
                                            <li><a type="button" data-toggle="modal" data-target="#Login-Modal">المقايسات</a></li>
                                            @endif
-                                           <li><a href="{{ route('ar.category.show_all') }}">الفئات</a></li>
+                                           <li><a href="{{ route('ar.category.show_all') }}">التصنيفات</a></li>
                                            <li class="dropdown"><a href="#"  class="dropdown-toggle " data-toggle="dropdown">موردي الخدمات <i class="fa fa-chevron-down"></i></a>
                                            <ul class="dropdown-menu dropdown-services">
                                                @foreach($user_types as $user_type)
@@ -35,7 +35,7 @@
                                </div>
                            </div>
                    </div>
-                 
+
                    <div class="col-md-4 col-sm-4 mg_bt10 col">
                        <form class="search">
                            <label>
@@ -64,7 +64,7 @@
                               <!-- user login dropdown end -->
                               <!-- inbox notificatoin end -->
                               <!-- alert notification start-->
-                              
+
                               @if((Auth::check()) && (Auth::user()->getUserType() != 'admin'))
                               <li id="alert_notificatoin_bar" class="dropdown">
                                 <a data-toggle="dropdown" class="dropdown-toggle notification-count">
@@ -112,8 +112,8 @@
                                                document.getElementById('logout-form').submit();">تسجيل خروج</a></li>
                                            </ul>
                                        </li>
-                                     
-                                   </ul> 
+
+                                   </ul>
                               </li>
 
                             </ul>
@@ -146,14 +146,14 @@
                            <a type="button" data-toggle="modal" data-target="#myModal2" class="btn-sign">انشىء حساب</a>
                             <a href="{{route('change-lang', ['lang' => 'en'])}}" class="lang">EN</a>
                        @endif
-                       
+
                    </div>
-                   
+
                </div>
            </div>
 
        </div>
-       
+
        <div class="nav-head  hidden-xs">
            <div class="container">
                <nav>
@@ -164,7 +164,7 @@
                        @else
                        <li><a type="button" data-toggle="modal" data-target="#Login-Modal">المقايسات</a></li>
                        @endif
-                       <li><a href="{{ route('ar.category.show_all') }}">الفئات</a></li>
+                       <li><a href="{{ route('ar.category.show_all') }}">التصنيفات</a></li>
                        <li class="dropdown"><a href="#"  class="dropdown-toggle " data-toggle="dropdown">موردي الخدمات <i class="fa fa-chevron-down"></i></a>
                        <ul class="dropdown-menu dropdown-services">
                            @foreach($user_types as $user_type)
@@ -185,7 +185,7 @@
             <h4><i class="icon fa fa-ban"></i> لديك بعض الأخطاء</h4>
             @foreach ($errors->all() as $error)
             <p>{{$error}}</p>
-            @endforeach    
+            @endforeach
         </div>
         <style>
             .errors-alert

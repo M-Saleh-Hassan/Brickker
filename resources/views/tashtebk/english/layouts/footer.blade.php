@@ -47,17 +47,18 @@
 							@if($setting->insta_show == 1)
 								<li><a href="https://{{$setting->insta}}" class="fa fa-instagram"></a></li>
 							@endif
-							<li>/ Brickker</li>
+							<li>@if($setting->email_show == 1){{$setting->email}}@endif/ Brickker</li>
 						</ul>
 
 					</div>
-
-					<div class="col-md-6 text-center hidden">
+                    @if($setting->mobile1_show == 1 || $setting->mobile2_show == 1)
+					<div class="col-md-6 text-center ">
 						<div  class="phone">
 							<i class="fa fa-phone"></i>
-							{{$setting->mobile1}} - {{$setting->mobile2}}
+							@if($setting->mobile1_show == 1){{$setting->mobile1}}@endif - @if($setting->mobile2_show == 1){{$setting->mobile2}}@endif
 						</div>
-					</div>
+                    </div>
+                    @endif
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('content')   
+@section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -14,13 +14,13 @@
             <li class="active">Settings</li>
             </ol>
         </section>
-    
+
         <!-- Main content -->
         <section class="content container-fluid">
-    
+
             <!--------------------------
             | Your Page Content Here |
-            -------------------------->                      
+            -------------------------->
             <div class="col-md-12">
                 <div class="box box-warning box-solid">
                     <div class="overlay hidden">
@@ -48,13 +48,26 @@
                                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Mobile 1" name="mobile1" value="{{$current->mobile1}}">
                                     </div>
                                     <div class="form-group">
+                                        <label>Mobile1 Show</label>
+                                        <input type="checkbox" name="mobile1_show" value="1" @if($current->mobile1_show == '1'){{'checked'}} @endif>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputEmail1">Mobile 2</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Mobile 2" name="mobile2" value="{{$current->mobile2}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile2 Show</label>
+                                        <input type="checkbox" name="mobile2_show" value="1" @if($current->mobile2_show == '1'){{'checked'}} @endif>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email" value="{{$current->email}}">
                                     </div>
+                                    <div class="form-group">
+                                        <label>Email Show</label>
+                                        <input type="checkbox" name="email_show" value="1" @if($current->email_show == '1'){{'checked'}} @endif>
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">FB Link</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" placeholder="FB Link" name="fb" value="{{$current->fb}}">
@@ -98,7 +111,7 @@
                                             <div class="col-md-8">
                                                 <p class="image_chosen"><a target='_blank' href='{{asset('')}}{{$current->getLogo()->link}}'>{{$current->getLogo()->original_name}}</a></p>
                                             </div>
-                                        </div> 
+                                        </div>
                                         <br>
                                         <!-- Add Image Modal -->
                                         <div class="modal fade" id="modal-default">
@@ -115,14 +128,14 @@
                                                             @foreach ($media as $one)
                                                                 <option @if($current->logo == $one->id){{'selected'}} @endif data-img-label="<a target='_blank' href='{{asset('')}}{{$one->link}}'>{{$one->original_name}}</a>'" data-img-src="{{asset('')}}{{$one->link}}" data-img-class="custom-image" value="{{$one->id}}">{{$one->original_name}}</option>
                                                             @endforeach
-                                                    </select>                            
+                                                    </select>
                                                 </div>
                                             </div>
                                             <!-- /.modal-content -->
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
-                                
+
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Fav Icon</label><br>
@@ -135,7 +148,7 @@
                                             <div class="col-md-8">
                                                 <p class="image_chosen"><a target='_blank' href='{{asset('')}}{{$current->getFav()->link}}'>{{$current->getFav()->original_name}}</a></p>
                                             </div>
-                                        </div> 
+                                        </div>
                                         <br>
                                         <!-- Add Image Modal -->
                                         <div class="modal fade" id="modal-default1">
@@ -152,19 +165,19 @@
                                                             @foreach ($media as $one)
                                                                 <option @if($current->fav_icon == $one->id){{'selected'}} @endif data-img-label="<a target='_blank' href='{{asset('')}}{{$one->link}}'>{{$one->original_name}}</a>'" data-img-src="{{asset('')}}{{$one->link}}" data-img-class="custom-image" value="{{$one->id}}">{{$one->original_name}}</option>
                                                             @endforeach
-                                                    </select>                            
+                                                    </select>
                                                 </div>
                                             </div>
                                             <!-- /.modal-content -->
                                             </div>
                                             <!-- /.modal-dialog -->
                                         </div>
-                                
+
                                     </div>
                                 </div>
                                 <!-- /.box-body -->
                                 <button type="submit" class="btn btn-primary">Edit</button>
-                            </form>        
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -174,7 +187,7 @@
         <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-    
+
 @endsection
 @section('js')
 <script>
@@ -224,7 +237,7 @@
         });
     });
 
-</script> 
+</script>
 <style>
     li.custom-image
     {
@@ -238,5 +251,5 @@
     {
         width: 100% !important;
     }
-</style>   
+</style>
 @endsection

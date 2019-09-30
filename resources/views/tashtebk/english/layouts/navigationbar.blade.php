@@ -1,5 +1,5 @@
 <!--<div id="header">-->
-    <header  class="navbar-fixed-top box-shadow">  
+    <header  class="navbar-fixed-top box-shadow">
        <div class="top-head">
            <div class="container">
                <div class="row">
@@ -15,13 +15,13 @@
                                        <div class="line"></div>
                                    </div>
                                </div>
-                               <div class="mobile-nav d-none"> 
+                               <div class="mobile-nav d-none">
                                        <ul>
                                            <li class="active" ><a href="{{route('en.home.index')}}">Home</a></li>
                                            @if(Auth::check())
-                                           <li ><a href="{{ route('en.scale.index') }}">BOQs</a></li>
+                                           <li ><a href="{{ route('en.scale.index') }}">BOQ</a></li>
                                            @else
-                                           <li><a type="button" data-toggle="modal" data-target="#Login-Modal">BOQs</a></li>
+                                           <li><a type="button" data-toggle="modal" data-target="#Login-Modal">BOQ</a></li>
                                            @endif
                                            <li><a href="{{ route('en.category.show_all') }}">Catalogs</a></li>
                                            <li class="dropdown"><a href="#"  class="dropdown-toggle " data-toggle="dropdown">Service Providers <i class="fa fa-chevron-down"></i></a>
@@ -35,7 +35,7 @@
                                </div>
                            </div>
                    </div>
-                 
+
                    <div class="col-md-4 col-sm-6 mg_bt10 col">
                        <form class="search">
                            <label>
@@ -74,8 +74,8 @@
                                                document.getElementById('logout-form').submit();">Logout</a></li>
                                            </ul>
                                        </li>
-                                     
-                                   </ul> 
+
+                                   </ul>
                               </li>
                               <!-- user login dropdown end -->
                               <!-- inbox notificatoin end -->
@@ -142,23 +142,23 @@
                            <a type="button" data-toggle="modal" data-target="#myModal2" class="btn-sign">register</a>
                             <a href="{{route('change-lang', ['lang' => 'ar'])}}" class="lang">ع</a>
                        @endif
-                       
+
                    </div>
-                   
+
                </div>
            </div>
 
        </div>
-       
+
        <div class="nav-head  hidden-xs">
            <div class="container">
                <nav>
                    <ul class="drop drop1">
                        <li class="active" ><a href="{{route('en.home.index')}}">Home</a></li>
                        @if(Auth::check())
-                       <li ><a href="{{ route('en.scale.index') }}">BOQs</a></li>
+                       <li ><a href="{{ route('en.scale.index') }}">BOQ</a></li>
                        @else
-                       <li><a type="button" data-toggle="modal" data-target="#Login-Modal">BOQs</a></li>
+                       <li><a type="button" data-toggle="modal" data-target="#Login-Modal">BOQ</a></li>
                        @endif
                        <li><a href="{{ route('en.category.show_all') }}">Catalogs</a></li>
                        <li class="dropdown"><a href="#"  class="dropdown-toggle " data-toggle="dropdown">Service Providers <i class="fa fa-chevron-down"></i></a>
@@ -181,7 +181,7 @@
             <h4><i class="icon fa fa-ban"></i> You get some errors!</h4>
             @foreach ($errors->all() as $error)
             <p>{{$error}}</p>
-            @endforeach    
+            @endforeach
         </div>
         <style>
             .errors-alert

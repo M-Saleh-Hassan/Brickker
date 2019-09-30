@@ -1,6 +1,6 @@
 @extends('tashtebk.arabic.layouts.master')
 
-@section('content') 
+@section('content')
 <!--<div id="body">-->
 <main>
     <section class="gray section">
@@ -31,7 +31,7 @@
                             <p>{{$user->company_name}}</p>
                         </div>
                         <div class="item">
-                            <h5><div class="fa fa-pencil"></div> الفئات</h5>
+                            <h5><div class="fa fa-pencil"></div> التصنيفات</h5>
                             <?php $i=0; ?>
                             @foreach ($user->categories as $category)
                                 <?php if($i==4)$i=0?>
@@ -53,7 +53,7 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#products">المنتجات</a></li>
                         </ul>
-                        
+
                         <div class="tab-content">
                             <div id="products" class="tab-pane fade in active">
                                 <div class="row product-pane">
@@ -65,7 +65,7 @@
                                                         <img src="{{asset('').$product->image}}" alt="" style="height:110px;">
                                                     </a>
                                                 </div>
-                                                
+
                                                 <div class="p-info">
                                                     <h4 class="edit-form-title">{{$product->title}} </h4>
                                                     <div>
@@ -75,7 +75,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>                                                                    
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                         <h3 class="panel-title"><span class="fa fa-comment"></span> {{$user->username}} </h3>
                         <a href="#" class="text-right"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
                     </div>
-                    
+
                     <div class="panel-body msg_container_base">
                         <div class="contain-chat">
                           @foreach(Auth::User()->getUserMessages($user->id) as $message)
@@ -116,9 +116,9 @@
                                   <span class="time_date">{{$message->created_at}}</span> </div>
                               </div>
                             @endif
-                          @endforeach                                
+                          @endforeach
                         </div>
-                        
+
                         <div class="type_msg">
                             <div class="input_msg_write">
                                 <form class="form-horizontal" method="POST" action="{{ route('ar.chat.send') }}" enctype="multipart/form-data">
@@ -129,12 +129,12 @@
                                 </form>
                             </div>
                         </div>
-                
+
                     </div>
                 </div>
             </div>
             @endauth
-            
+
     </section>
 </main>
 <!--</div>-->
@@ -146,7 +146,7 @@
         var current_class = $( this ).children().attr('class');
         var target_class  = 'fa fa-heart';
         if(current_class == target_class) target_class = 'fa fa-heart-o';
-        
+
         $.ajax({
             url:"{{ route('ar.product.favorite') }}",
             method:"POST",
@@ -165,5 +165,5 @@
     $('.chat-control').on('click', function(){
         $('.chat-window').toggleClass('hidden');
     });
-    
+
 @endsection

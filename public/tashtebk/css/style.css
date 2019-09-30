@@ -3,7 +3,7 @@
     --main-bg:#fff;
     --main-color:#003662;
     --sec-color:#EF374A;
-   
+
 }
 
 *, *:after, *:before {
@@ -34,7 +34,7 @@ html,body {
     height: 100%;
 }
 .relative {
-    position:relative;    
+    position:relative;
 }
 
 #container {
@@ -55,7 +55,7 @@ html,body {
     height:410;   /* Height of the footer */
     background:#3c4c52;
  }
- 
+
  footer{
      background:#3c4c52;
  }
@@ -115,7 +115,7 @@ html,body {
     font-weight: bold;
     font-size: 20px;
     color: var(  --main-color);;
-    
+
 }
 .modal-header .close {
     position: absolute;
@@ -124,8 +124,8 @@ html,body {
     top: -10px;
     opacity:1;
     color: #003964;
-    
-    
+
+
 }
 
 
@@ -134,7 +134,7 @@ html,body {
     border-radius: 0;
     margin: 20px 15px;
 }
-.modal-header .close , .modal-header .close:hover , .modal-header .close:focus  
+.modal-header .close , .modal-header .close:hover , .modal-header .close:focus
 {
     outline: 0;
     color: #003964;
@@ -163,7 +163,7 @@ html,body {
     border-bottom: 1.4px solid var(  --main-color);;
     -webkit-box-shadow: none;
     box-shadow: none;
-    
+
 }
 ::-webkit-input-placeholder { /* Chrome */
     color: #555 !important;
@@ -221,7 +221,7 @@ ul{
     border-radius:50%;
     margin-right:10px;
 }
-.drop .dropdown-menu{ 
+.drop .dropdown-menu{
 position: absolute;
     top: 100%;
     left: 0;
@@ -241,12 +241,12 @@ position: absolute;
 }
 
 .dropdown-services{
-    width:220px !important; 
+    width:220px !important;
 }
- 
+
 .drop1 .dropdown-menu{
     margin: 9.3px auto 0;
-   
+
 }
 
 .drop1  .dropdown-menu  li {
@@ -311,8 +311,8 @@ a:hover , a:focus , a:active{
 	background: var(  --main-color);;
 }
 
-/* ===================== 
-    header 
+/* =====================
+    header
     ===================== */
     /* mobile*/
 
@@ -340,14 +340,14 @@ a:hover , a:focus , a:active{
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	
+
 }
 
 .mobile .mobile-nav{
 	background-color: transparent;
 	width: 100%;
 	height: 100%;
-	
+
 	text-align: center;
 }
 
@@ -435,13 +435,13 @@ header{
 
 .search-div ul li a
 {
-    color: var(  --main-color);;  
+    color: var(  --main-color);;
     font-weight: bold;
 }
 
 .search-div ul li a:hover
 {
-    color: var(  --sec-color);;  
+    color: var(  --sec-color);;
     background: #fff;
     font-weight: bold;
 }
@@ -509,8 +509,8 @@ header ul li a:active ,header ul li a:hover ,header ul li a:focus ,header ul li.
     color:#fff;
 }
 
-/* =================== 
-    SLIDER 
+/* ===================
+    SLIDER
     =================== */
 /*.carousel{
    margin-top: 124px;
@@ -566,12 +566,12 @@ header ul li a:active ,header ul li a:hover ,header ul li a:focus ,header ul li.
     bottom: 50px;
     left: 0;
     right: 0;
-   
+
 }
 
 
 .step img{
-    width: 136px;   
+    width: 136px;
 }
 
 
@@ -581,7 +581,7 @@ header ul li a:active ,header ul li a:hover ,header ul li a:focus ,header ul li.
 }
 
 /* =========================
-    catg / product 
+    catg / product
     ==========================*/
     .ele-img{
         DISPLAY: inline-block;
@@ -613,7 +613,7 @@ header ul li a:active ,header ul li a:hover ,header ul li a:focus ,header ul li.
 
 .element:hover  .ele-img::after{
 background: var(  --sec-color);;
-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07) 
+box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
 }
 .ele-img img{
     width: 100px;
@@ -652,7 +652,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
 
 
 /* =========================
-    inner pages 
+    inner pages
     ==========================*/
   /*  .banner{
         margin-top: 124px;
@@ -669,7 +669,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     .breadcrumb li a{
        color:var(  --sec-color);;
     }
- 
+
     .point{
         display: flex;
         justify-content: center;
@@ -681,7 +681,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     text-align: center;
     }
 
-    .img-prdct img{ 
+    .img-prdct img{
     margin: auto;
     display: block;
     position: absolute;
@@ -703,14 +703,14 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         bottom: 0;
         right: 0;
     }
- 
+
      .about h4{
         color: var(  --sec-color);;
         text-transform: uppercase;
         font-weight: bold;
-        margin-bottom:15px 
+        margin-bottom:15px
     }
-    
+
     .desc h4 {
          text-transform: uppercase;
         font-weight: bold;
@@ -817,9 +817,9 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         margin-bottom: 30px;
         font-weight: 600;
         border-bottom: 2px solid #000;
-    
+
     }
-    
+
     .info ul{
         width: 35%;
         margin: auto;
@@ -827,7 +827,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     .info li{
         line-height: 2.2;
         font-weight: 600;
-        
+
     }
 
     .info li span{
@@ -870,7 +870,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         margin-bottom: 10px;
         position: relative;
     }
-    
+
     .divider{
      width: 30px;
     height: 5px;
@@ -894,13 +894,13 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     padding-left: 25px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
   }
-  
+
   /* Hide the browser's default checkbox */
   .contain input {
     position: absolute;
@@ -909,7 +909,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     height: 0;
     width: 0;
   }
-  
+
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
@@ -920,29 +920,29 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     background-color: #fff;
     border: 2px solid #2c2c2c;
   }
-  
+
   /* On mouse-over, add a grey background color */
   .contain:hover input ~ .checkmark {
     background-color: #ccc;
   }
-  
+
   /* When the checkbox is checked, add a blue background */
   .contain input:checked ~ .checkmark {
     background-color: #fff;
   }
-  
+
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  
+
   /* Show the checkmark when checked */
   .contain input:checked ~ .checkmark:after {
     display: block;
   }
-  
+
   /* Style the checkmark/indicator */
   .contain .checkmark:after {
     left: 4px;
@@ -955,7 +955,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-      
+
       .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
           border-color: var(  --sec-color);;
             background:var(  --sec-color);;
@@ -969,23 +969,23 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         margin-bottom: 30px;
         position:relative;
       }
-      
+
       .magnify{
-          border:1px solid #ccc; 
-          display:inline-block; 
+          border:1px solid #ccc;
+          display:inline-block;
           line-height:0;
           width:100%;
           position:relative
       }
-      
+
       .magnify .product__price-tag {
             width: 75px;
              height: 35px;
              top: 20px;
             right: -20px;
-             
+
       }
-      
+
      .magnify  .product__price-tag::after {
             content: '';
             position: absolute;
@@ -1012,13 +1012,13 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
                 padding-top: 8px;
                 padding-left: 8px;
                 font-size: 15px;
-            
+
         }
-        
-    
-        
-   
-        
+
+
+
+
+
         .product__price-tag::after {
             content: '';
             position: absolute;
@@ -1027,7 +1027,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
             right: 0px;
             top: 28px;
         }
-        
+
       .overlay-product{
         position: absolute;
         top: 0;
@@ -1039,7 +1039,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         width: 100%;
         height: 100%;
         background: rgba(0,0,0,0.6);
-        transform: rotateX(90deg); 
+        transform: rotateX(90deg);
         transform-origin: top;
         opacity: 0;
         -webkit-transition: all .3s ease-in-out;
@@ -1049,7 +1049,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         justify-content:center;
         align-items: center;
       }
-      
+
       .elements a{
           color: #fff;
         display: inline-block;
@@ -1057,26 +1057,26 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         width: 25px;
         height: 25px;
         line-height: 25px;
-          
+
       }
-      
+
       .p-item:hover {
-        cursor:pointer;          
+        cursor:pointer;
       }
        .p-item:hover .overlay-product{
            opacity:1;
            transform: rotateX(0);
        }
       .img-item{
-         height: 150px;
+         height: 170px;
          position: relative;
          overflow:hidden;
-      } 
-      
+      }
+
       .product-pane  .img-item{
           background: #eee;
       }
-   
+
       .img-item img{
         top: 0;
         bottom: 0;
@@ -1097,7 +1097,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         text-align: left;
         border-radius: 0 0 25px 25px;
       }
-      
+
       .p-info h4{
           overflow:hidden;
           color:#fff;
@@ -1107,19 +1107,19 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         font-size: 16px;
         margin-right:5px;
     }
-      
-      
+
+
       .price-p{
           display:inline-block;
         float: right;
         margin-right:10px;
         color: #eee;
       }
-      
+
     .swiper-related  .p-item{
         width:75%;
     }
-    
+
     .title-related{
         font-size: 24px;
     color: var(  --main-color);;
@@ -1127,11 +1127,11 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     margin-bottom: 30px;
     font-weight: 600;
     }
-    
+
     .relate-item{
         width:95% !important;
     }
-    
+
     .xzoom{
         width:100% !important;
         height:360px !important;
@@ -1143,7 +1143,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     .nav-review{
         position:relative;
     }
-    
+
     .nav-review:before{
         content: "";
     height: 1px;
@@ -1153,7 +1153,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     top: 50%;
     left: 0;
     }
-    
+
      .nav-review .nav-tabs{
         margin-bottom: 0;
         text-align: center;
@@ -1180,13 +1180,13 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         top: calc(50% - 2px);
         left: 100%;
      }
-     
-     
+
+
      .nav-review .nav-tabs:before{
         right: 100%;
         left: auto;
      }
-     
+
      .nav-review .nav-tabs li{
         border: none;
         margin-bottom: -1px;
@@ -1199,7 +1199,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         height: 40px;
         border-radius:20px;
      }
-     
+
        .nav-review .nav-tabs li.active{
            background:#fff;
        }
@@ -1207,7 +1207,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
              color:#212121;
              border:0;
          }
-       
+
        .nav-review .nav-tabs li a ,.nav-review .nav-tabs li a:hover , .nav-review .nav-tabs li a:focus{
             font-size: 16px;
             border:0;
@@ -1219,13 +1219,13 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
             padding-bottom: 1px;
             text-transform: capitalize;
        }
-       
+
        .review-prdct .fa{
            font-size: 18px;
           color: var(  --sec-color);;
        }
        /* ====================
-    footer 
+    footer
 ====================*/
 .foot-bottom{
     background: #000000;
@@ -1315,7 +1315,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         font-size: 15px
     }
 
-    /*====================== 
+    /*======================
     profile ================= */
     .profile{
         padding: 30px 0;
@@ -1341,7 +1341,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
         border: 3px solid #d2d6de;
         border-radius: 20px;
     }
-    
+
     .profile-info h4{
         font-size: 21px;
         margin-top: 5px;
@@ -1523,7 +1523,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
 .additional-prices-p{
     width: 70px;
     height: 3px;
-    background: var(  --main-color);;    
+    background: var(  --main-color);;
 }
 
 .btn-consult ,.btn-consult:hover , .btn-consult:focus{
@@ -1566,7 +1566,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
 
 
 .pad-15{
-   padding: 15px; 
+   padding: 15px;
 }
 
 .extend-modal-width{
@@ -1616,7 +1616,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
     margin-bottom:10px;
 }
 .rate .fa{
-  
+
     font-size:22px;
     color:var(  --sec-color);;
 }
@@ -1713,7 +1713,7 @@ box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.07)
 }
 
 .edit-form-title{
-   font-size:13px !important; 
+   font-size:13px !important;
 }
 
 .image-other-product{
@@ -1989,7 +1989,7 @@ textarea.text-form{
     left: 0;
     right: 0;
     bottom: 0;
-    
+
 }
 
 .box-select>a{
@@ -2046,7 +2046,7 @@ textarea.text-form{
     height: 90%;
 }
 
-/*========================== 
+/*==========================
 steps ======================*/
 .wizard ul {
     display: flex;
@@ -2055,7 +2055,7 @@ steps ======================*/
     justify-content: center;
     background: transparent;
     margin: 5px 0;
-  
+
 }
  .wizard > .content > .body {
         position: relative !important;
@@ -2091,7 +2091,7 @@ steps ======================*/
     margin-right: 5px;
 }
 
-.wizard > .steps > ul > li >a 
+.wizard > .steps > ul > li >a
 {
     margin:0;
     margin-right: 5px;
@@ -2131,7 +2131,7 @@ steps ======================*/
     transform: translateX(4px);
     border-left-color: #fff;
     margin: 0;
-   
+
 }
 .wizard > .steps > ul > li:last-child a:after,.wizard > .steps > ul > li:last-child:after {
     content: "";
@@ -2154,7 +2154,7 @@ steps ======================*/
 }
 
 .wizard > .steps .done a::after, .wizard > .steps .done a:hover::after, .wizard > .steps .done a:active::after{
-    border-left-color: rgba(0,54,101,0.8) !important; 
+    border-left-color: rgba(0,54,101,0.8) !important;
     z-index: 3;
 }
 
@@ -2227,7 +2227,7 @@ steps ======================*/
 
 .scale-item:hover .overlay-product{
      transform: rotateX(0);
-     opacity:1;    
+     opacity:1;
 }
 
 .scale-item .element h4 {
@@ -2275,7 +2275,7 @@ steps ======================*/
     cursor: pointer;
     transition: 0.3s;
   }
-  
+
   .messaging{
       margin-bottom:50px;
   }
@@ -2289,9 +2289,9 @@ steps ======================*/
 }
 
 
-.headind_srch{ 
-    padding:10px 29px 10px 20px; 
-    overflow:hidden; 
+.headind_srch{
+    padding:10px 29px 10px 20px;
+    overflow:hidden;
     border-bottom:1px solid #c4c4c4;
 }
 
@@ -2307,8 +2307,8 @@ steps ======================*/
     overflow: hidden;
     position: relative;
   }
-.chat_people{ 
-    overflow:hidden; 
+.chat_people{
+    overflow:hidden;
     clear:both;
 }
 
@@ -2317,21 +2317,21 @@ button.chat_list {
     margin: 0;
     padding: 18px 16px 10px;
   }
-  
+
   button.chat_list.active
   {
     background: #ebebeb;
   }
- 
 
 
-    .mesgs {    
+
+    .mesgs {
         position: relative;
         height: 70vh;
         border-left: 1px solid #c4c4c4;
         padding: 30px 0 0 25px;
       }
-      
+
 
       .input_msg_write input:focus , .msg_send_btn:focus{
         outline: 0
@@ -2341,7 +2341,7 @@ button.chat_list {
       position: absolute;
       width: 95%;
       bottom: 0;
-      
+
     }
     .msg_send_btn {
       background: var(  --main-color) none repeat scroll 0 0;
@@ -2365,20 +2365,20 @@ button.chat_list {
       .incoming_msg{
           display: flex
       }
-  
+
   .chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
   .chat_ib h5 span{ font-size:13px; float:right;}
   .chat_ib p{ font-size:14px; color:#989898; margin:auto}
-  
+
   .chat_ib {
     padding: 0 0 0 15px;
   }
   .chat_img img , .incoming_msg_img img{
       width: 40px
   }
-  .chat_people{ 
+  .chat_people{
      overflow:hidden;
-     clear:both; 
+     clear:both;
      display: flex
 }
   .chat_list {
@@ -2387,10 +2387,10 @@ button.chat_list {
     padding: 18px 16px 10px;
   }
   .inbox_chat { height:auto; overflow-y: scroll;}
-  
+
   .active_chat{ background:#ebebeb;}
-  
-  
+
+
   .received_msg {
     display: inline-block;
     padding: 0 0 0 10px;
@@ -2413,7 +2413,7 @@ button.chat_list {
     margin: 8px 0 0;
   }
   .received_withd_msg { width: 57%;}
- 
+
    .sent_msg p {
     background: var(  --main-color) none repeat scroll 0 0;
     border-radius: 3px;
@@ -2439,7 +2439,7 @@ button.chat_list {
   .input_msg_write input:focus , .msg_send_btn:focus{
       outline: 0
   }
- 
+
   .msg_send_btn {
     background: var(  --main-color) none repeat scroll 0 0;
     border: medium none;
@@ -2455,7 +2455,7 @@ button.chat_list {
   }
 
 
- .chat-window .col-md-2, .chat-window  .col-md-10{ 
+ .chat-window .col-md-2, .chat-window  .col-md-10{
     padding:0;
 }
 .panel{
@@ -2623,7 +2623,7 @@ button.chat_list {
 
 /*================================
     checkouts ===============================*/
-    
+
      .checkouts  nav > .nav.nav-tabs{
 
         border: none;
@@ -2653,7 +2653,7 @@ button.chat_list {
           text-align: center;
           margin: 0 !important;
       }
-      
+
       .checkouts  nav > ul li.active a:after
        {
         content: "";
@@ -2671,7 +2671,7 @@ button.chat_list {
           border-bottom:5px solid var(  --main-color);;
           padding:30px 25px;
       }
-      
+
       .checkouts nav > ul li a:hover,
       .checkouts  nav >ul li a:focus,.checkouts .nav-tabs>li.active>a:hover ,  .checkouts .nav-tabs>li.active>a,.checkouts .nav-tabs>li.active>a:focus
       {
@@ -2696,8 +2696,8 @@ button.chat_list {
         margin:5px 0px;
          padding: 0 5px;
     }
-     
-    .headerRight a:hover{ 
+
+    .headerRight a:hover{
     color: var(  --main-color) !important;
     background:#fff;
     border-radius:5px;
@@ -2708,7 +2708,7 @@ button.chat_list {
           font-size:15px;
       }
     /*New Nav*/
-   
+
 /*notification*/
 
 
@@ -2876,12 +2876,12 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         border-bottom:1px solid var(  --main-color);;
 }
 .notifications-menu li:last-child {
-    
+
         border-bottom:0px solid var(  --main-color);;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background-color: unset !important;
-    
+
 }
 .lang-bottom{
     margin:0 5px;
@@ -2898,7 +2898,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     nav ul li{
         margin: 0 10px;
     }
-    
+
     nav ul li a{
         padding: 8px 20px;
     }
@@ -2907,9 +2907,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         width: 90%;
         bottom: 0;
     }
-        
+
     }
-    
+
     @media only screen and (min-width: 768px) and (max-width: 990px) {
         .chat-window{
             padding: 0 !important;
@@ -2917,7 +2917,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         nav ul li{
             margin: 0 8px;
         }
-        
+
         nav ul li a{
             padding: 8px 15px;
         }
@@ -2926,7 +2926,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             bottom: 0;
         }
     }
-    
+
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .wizard > .steps{
         position:relative;
@@ -2942,11 +2942,11 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         .foot-mid ul {
         justify-content: center;
         }
-       
+
         .wizard ul {
             display: block;
         }
-        .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li , .wizard > .steps a:hover, .wizard > .steps a:active{  
+        .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li , .wizard > .steps a:hover, .wizard > .steps a:active{
             border-radius:10px;
             margin: 5px !important;
         }
@@ -3024,7 +3024,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             padding: 40px 0 40px;
         }
     }
-    
+
     @media only screen and (min-width: 360px) and (max-width: 480px) {
         .wizard > .steps{
         position:relative;
@@ -3043,7 +3043,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
         .wizard ul {
             display: block;
         }
-        .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li ,  .wizard > .steps a:hover, .wizard > .steps a:active{  
+        .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li ,  .wizard > .steps a:hover, .wizard > .steps a:active{
             border-radius:10px;
             margin: 5px !important;
         }
@@ -3051,7 +3051,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             content: "";
             border: none;
         }
-        
+
         .chat_img img, .incoming_msg_img img {
             width: 12px;
         }
@@ -3131,7 +3131,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             margin-left: 65px;
         }
     }
-    
+
     @media only screen and (min-width: 0px) and (max-width: 320px){
        .top-head{
             width:400px !important;
@@ -3156,7 +3156,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             .wizard ul {
                 display: block;
             }
-            .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li , .wizard > .steps a:hover, .wizard > .steps a:active{  
+            .wizard > .steps > ul > li>* ,  .wizard > .steps > ul > li , .wizard > .steps a:hover, .wizard > .steps a:active{
                 border-radius:10px;
                 margin: 5px !important;
             }
@@ -3168,13 +3168,13 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             .chat_img img, .incoming_msg_img img {
                 width: 12px;
             }
-    
+
             .chat_ib h5 span ,.chat_ib p {
                 display: none;
             }
-    
+
             .chat_ib h5 {
-                font-size: 10px; 
+                font-size: 10px;
                 margin: 0;
             }
             .mesgs{
@@ -3205,7 +3205,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
                 width: 85%;
                 bottom: 0;
             }
-    
+
             .input_msg_write input {
                 font-size: 12px;
                 min-height: 38px;
@@ -3219,7 +3219,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             .messaging h4 {
                 font-size: 15px;
             }
-    
+
             .messaging h3 {
                 margin: 15px;
                 font-size: 18px;
@@ -3227,7 +3227,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
             button.chat_list{
                 padding: 10px 5px;
             }
-    
+
     }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -3247,11 +3247,11 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 .lang-bottom a{
     margin-right: 0px !important;
-  
-   
+
+
 }
 .col{
-    
+
     display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -3270,7 +3270,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 .top-head .row  .col{
     min-height:45px;
-   
+
     display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -3301,7 +3301,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .box-select a.height-plus {
-    height:305px;   
+    height:305px;
 }
 .d-none{
     display:none;
@@ -3325,7 +3325,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     height: 200px;
     justify-content: space-around;
     align-items: center;
-                                       
+
  }
  #menu5 .flexing button{
      width:200px;
