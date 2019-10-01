@@ -188,7 +188,7 @@
                                 <form class="form-horizontal" method="POST" action="{{ route('en.profile.product.save',['username_tag' => Auth::user()->username_tag]) }}" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Category</label>
+                                        <label  class="col-sm-2 control-label">Category*</label>
 
                                         <div class="col-sm-10">
                                             <select class="select-product-category" name="product_category">
@@ -206,7 +206,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Unit</label>
+                                        <label  class="col-sm-2 control-label">Unit*</label>
 
                                         <div class="col-sm-10">
                                             <select class="select-product-unit" name="product_unit">
@@ -224,7 +224,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Title</label>
+                                        <label  class="col-sm-2 control-label">Title*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_title" placeholder="{{Auth::user()->getProductOrServiceType()}} Title" value="{{Request::old('product_title')}}">
@@ -232,7 +232,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Price</label>
+                                        <label  class="col-sm-2 control-label">Price*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_price" placeholder="{{Auth::user()->getProductOrServiceType()}} Price" min="0" value="{{Request::old('product_price')}}">
@@ -240,7 +240,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Discount</label>
+                                        <label  class="col-sm-2 control-label">Discount*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_discount" placeholder="{{Auth::user()->getProductOrServiceType()}} Discount" min="0" max="99" value="{{Request::old('product_discount')}}">
@@ -248,7 +248,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Brand</label>
+                                        <label  class="col-sm-2 control-label">Brand*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_brand" placeholder="{{Auth::user()->getProductOrServiceType()}} Brand" value="{{Request::old('product_brand')}}">
@@ -256,7 +256,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Model Name</label>
+                                        <label  class="col-sm-2 control-label">Model Name*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_model_name" placeholder="{{Auth::user()->getProductOrServiceType()}} Model Name" value="{{Request::old('product_model_name')}}">
@@ -264,7 +264,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Grade</label>
+                                        <label  class="col-sm-2 control-label">Grade*</label>
 
                                         <div class="col-sm-10">
                                             <input type="text" class="form-control" name="product_grade" placeholder="{{Auth::user()->getProductOrServiceType()}} Grade" value="{{Request::old('product_grade')}}">
@@ -272,7 +272,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Short Description</label>
+                                        <label  class="col-sm-2 control-label">Short Description*</label>
 
                                         <div class="col-sm-10">
                                             <textarea type="text" class="form-control" name="product_short_description" placeholder="{{Auth::user()->getProductOrServiceType()}} Short Description" >{{Request::old('product_short_description')}}</textarea>
@@ -280,7 +280,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Long Description</label>
+                                        <label  class="col-sm-2 control-label">Long Description*</label>
 
                                         <div class="col-sm-10">
                                             <textarea type="text" class="form-control" name="product_long_description" placeholder="{{Auth::user()->getProductOrServiceType()}} Long Description" >{{Request::old('product_long_description')}}</textarea>
@@ -288,7 +288,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Main Image</label>
+                                        <label  class="col-sm-2 control-label">Main Image*</label>
 
                                         <div class="col-sm-10">
                                             <input type="file" class="form-control" name="product_image">
@@ -296,7 +296,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label  class="col-sm-2 control-label">Other Images</label>
+                                        <label  class="col-sm-2 control-label">Other Images*</label>
 
                                         <div class="col-sm-10">
                                             <input type="file" class="form-control" name="product_other_images[]" multiple>
